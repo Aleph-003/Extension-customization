@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Customizable Extension",
+  "version": "1.0",
+  "description": "...",
+  "permissions": [
+    "sidePanel"
+  ],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}
