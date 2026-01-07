@@ -1,0 +1,28 @@
+// --- Top
+
+Safe, Load, Import, Export
+[Previous], [Next]
+
+// --- Mid
+
+Theme
+
+// --- Bottom 
+
+// calculate the hex, rgb value
+
+//      <name>
+// button | hex value
+// <>       <Hex>
+
+hex copy/paste
+
+"frame"
+"frame_inactive"
+"toolbar"
+"tab_text"
+"tab_background_text"
+"bookmark_text"
+"omnibox_text"
+"omnibox_background"
+"toolbar_button_icon"

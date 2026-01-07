@@ -1,0 +1,91 @@
+/* Why is there a space between the top and the box */
+:root {
+
+    /* --- Main page */
+
+    --main-height:300px;
+    --main-width:140px;
+
+    /* all of this gives you the window */
+    --main-mar-height-p:0.1; /* margin */
+    --main-top-height-p:0.1;
+    --main-mid-height-p:0.35;
+    --main-bot-height-p:0.45;
+
+    --main-mar-number:0.025; /* there 4 margin so 1/4 */
+
+    /* Translation */
+    /* margin px for 1*/
+    --main-mar-px:calc(var(--main-height) * var(--main-mar-number)); 
+    --main-mar-all-px:var(--main-mar-px) var(--main-mar-px) var(--main-mar-px) var(--main-mar-px); 
+    
+    --main-all-width-px:calc(var(--main-width) - var(--main-mar-px) * 2);
+
+    --main-top-height-px:calc(var(--main-height) * var(--main-top-height-p)); 
+    --main-mid-height-px:calc(var(--main-height) * var(--main-mid-height-p));
+    --main-bot-height-px:calc(var(--main-height) * var(--main-bot-height-p));
+    
+    --main-top-y-transform:var(--main-mar-px);
+    --main-mid-y-transform:calc(var(--main-top-height-px) + var(--main-mar-px) * 2);
+    --main-bot-y-transform:calc(var(--main-top-height-px) + var(--main-mid-height-px) + var(--main-mar-px) * 3);
+
+    /* --- Second page */
+
+    /* [To change] for now its the same */
+    --second-height:var(--main-height);
+    --second-width:var(--main-width);
+}
+
+
+/* debuging */
+/* * {
+    outline: 1px solid red;
+} */
+
+/* --- Main window */
+#main {
+    position: relative;
+    background-color: aqua;
+
+    width: var(--main-width);
+    height: var(--main-height);
+
+    outline : 1px solid rgba(0, 255, 255, 0.5);
+}
+
+#top {
+    position: absolute;
+    background-color: red;
+
+    height: var(--main-top-height-px);
+    width: var(--main-all-width-px);
+
+    transform: translateY(var(--main-top-y-transform)) translateX(var(--main-mar-px));
+}
+
+#mid {
+    position: absolute;
+    background-color: blue;
+
+    height: var(--main-mid-height-px);
+    width: var(--main-all-width-px);
+    
+    transform: translateY(var(--main-mid-y-transform)) translateX(var(--main-mar-px));
+}
+
+#bot {
+    position: absolute;
+    background-color: green;
+
+    height: var(--main-bot-height-px);
+    width: var(--main-all-width-px);
+
+    transform: translateY(var(--main-bot-y-transform)) translateX(var(--main-mar-px));
+}
+
+
+/* --- Second window */
+.second {
+    position: relative;
+}
+
