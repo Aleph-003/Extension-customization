@@ -26,7 +26,9 @@
 
         <!-- The preview of the theme-->
         <div id="mid" class="box">
-            
+            <!-- <canvas id="myCanvas" width="256" height="256"></canvas>
+            <script type="module" src="debug.js"></script> -->
+
                 
             <!-- < > [refresh] [field] [extension] -->
             
@@ -35,6 +37,30 @@
         <!-- Selecting the colors -->
         <div id="bot" class="box">
 
+            <!-- slider -->
+            <button type="button" onclick="disableElementID()"></button>
+
+            <script>
+                function disableElementID() {
+                    const ctxE = document.getElementById("enable");
+                    const ctxD = document.getElementById("disable");
+                    
+                    if (ctxE.style.display === "none") {
+                        ctxE.style.display = "block";
+                        ctxD.style.display = "none";
+                    } else {
+                        ctxE.style.display = "block";
+                        ctxD.style.display = "none";
+                    }
+                }
+
+            </script>
+            <div id="enable">
+                <p>enable</p>
+            </div>
+            <div id="disable">
+                <p>disable</p>
+            </div>
             <!-- the list of all the button for customization -->
             <!-- Number of tag: ? -->
 
@@ -43,15 +69,16 @@
             <!-- 3 -->
             <ul id="color-picker">
                 <li>
-                    <button type="button" id="color-picker"></button>
-                    <script src=color-picker.js></script>
                 </li>
             </ul>
         </div>
     </div>
 
-    <div class="second">
-
+    <div id="second">
+        <canvas id="canvas-gradient"> </canvas>
+        <script type="module" src="gradient.js"></script>
 
     </div>
+
+    <script type="module" src="api/ui-manager.js"></script>
 </html>

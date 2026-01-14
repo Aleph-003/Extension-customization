@@ -1,7 +1,7 @@
 /* Why is there a space between the top and the box */
 :root {
 
-    /* --- Main page */
+    /* ------------ Main page */
 
     --main-height:300px;
     --main-width:140px;
@@ -29,7 +29,13 @@
     --main-mid-y-transform:calc(var(--main-top-height-px) + var(--main-mar-px) * 2);
     --main-bot-y-transform:calc(var(--main-top-height-px) + var(--main-mid-height-px) + var(--main-mar-px) * 3);
 
-    /* --- Second page */
+
+
+    /* Canvas */
+    --main-can-h-px:calc(var(--main-all-width-px) - var(--main-mar-px) * 2);
+    --main-can-w-px:calc(var(--main-all-width-px) - var(--main-mar-px) * 2);
+
+    /* ------------ Second page */
 
     /* [To change] for now its the same */
     --second-height:var(--main-height);
@@ -38,9 +44,9 @@
 
 
 /* debuging */
-/* * {
+* {
     outline: 1px solid red;
-} */
+}
 
 /* --- Main window */
 #main {
@@ -83,7 +89,40 @@
     transform: translateY(var(--main-bot-y-transform)) translateX(var(--main-mar-px));
 }
 
+#bot button {
+    position: absolute;
+    background-color: blue;
+    width:"20px";
+    height:"50px";
 
+}
+
+#canvas-gradient {
+    position: absolute;
+    /* background-color: rgb(80, 169, 169); */
+
+    height: var(--main-can-h-px);
+    width: var(--main-can-w-px);
+
+    transform: translateY(var(--main-mar-px)) translateX(var(--main-mar-px));
+    
+    /* keep the box align */
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-radius: 20%;
+
+}
+
+#color-picker {
+    position: absolute;
+    background-color: white;
+
+    height: var(--main-can-h-px);
+    width: var(--main-can-w-px);
+
+    transform: translateY(var(--main-mar-px)) translateX(var(--main-mar-px));
+
+}
 /* --- Second window */
 .second {
     position: relative;
